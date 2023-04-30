@@ -3,6 +3,8 @@ body {
 }
 
 #visualization {
+  width: 800px;
+  height: 800px;
   overflow: auto;
 }
 

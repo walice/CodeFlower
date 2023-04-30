@@ -1,18 +1,18 @@
 var CodeFlower = function(selector, w, h) {
-  this.w = w;
-  this.h = h;
+  this.w = 800;
+  this.h = 600;
 
   d3.select(selector).selectAll("svg").remove();
 
   this.svg = d3.select(selector).append("svg:svg")
-    .attr('width', w)
-    .attr('height', h);
+    .attr('width', 800)
+    .attr('height', 800);
 
-  this.svg.append("svg:rect")
-    .style("stroke", "#999")
-    .style("fill", "#fff")
-    .attr('width', w)
-    .attr('height', h);
+  // this.svg.append("svg:rect")
+  //   .style("stroke", "#999")
+  //   .style("fill", "#fff")
+  //   .attr('width', w)
+  //   .attr('height', h);
 
   this.force = d3.layout.force()
     .on("tick", this.tick.bind(this))
